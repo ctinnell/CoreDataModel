@@ -12,6 +12,7 @@
 		840358B71A9B9A5700188EC6 /* CoreDataModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840358B61A9B9A5700188EC6 /* CoreDataModelTests.swift */; };
 		840358C11A9B9AD500188EC6 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840358C01A9B9AD500188EC6 /* CoreDataManager.swift */; };
 		840358C31A9B9AFC00188EC6 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 840358C21A9B9AFC00188EC6 /* CoreData.framework */; };
+		840358D61A9BB47000188EC6 /* CoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 840358D41A9BB47000188EC6 /* CoreDataModel.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -21,6 +22,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 840358A31A9B9A5700188EC6;
 			remoteInfo = CoreDataModel;
+		};
+		840358DD1A9BBFAC00188EC6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8403589B1A9B9A5700188EC6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 840358CB1A9BB35300188EC6;
+			remoteInfo = CoreDataModelSchema;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -33,6 +41,10 @@
 		840358B61A9B9A5700188EC6 /* CoreDataModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataModelTests.swift; sourceTree = "<group>"; };
 		840358C01A9B9AD500188EC6 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		840358C21A9B9AFC00188EC6 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		840358CC1A9BB35300188EC6 /* CoreDataModelSchema.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreDataModelSchema.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		840358CF1A9BB35300188EC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		840358D51A9BB47000188EC6 /* CoreDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataModel.xcdatamodel; sourceTree = "<group>"; };
+		840358D71A9BB48300188EC6 /* CoreDataModel 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "CoreDataModel 2.xcdatamodel"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +64,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		840358C91A9BB35300188EC6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -61,6 +80,7 @@
 				840358C21A9B9AFC00188EC6 /* CoreData.framework */,
 				840358A61A9B9A5700188EC6 /* CoreDataModel */,
 				840358B31A9B9A5700188EC6 /* CoreDataModelTests */,
+				840358CD1A9BB35300188EC6 /* CoreDataModelSchema */,
 				840358A51A9B9A5700188EC6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -70,6 +90,7 @@
 			children = (
 				840358A41A9B9A5700188EC6 /* CoreDataModel.framework */,
 				840358AF1A9B9A5700188EC6 /* CoreDataModelTests.xctest */,
+				840358CC1A9BB35300188EC6 /* CoreDataModelSchema.bundle */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -77,6 +98,7 @@
 		840358A61A9B9A5700188EC6 /* CoreDataModel */ = {
 			isa = PBXGroup;
 			children = (
+				840358D31A9BB3B500188EC6 /* Schema */,
 				840358A91A9B9A5700188EC6 /* CoreDataModel.h */,
 				840358C01A9B9AD500188EC6 /* CoreDataManager.swift */,
 				840358A71A9B9A5700188EC6 /* Supporting Files */,
@@ -109,6 +131,30 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		840358CD1A9BB35300188EC6 /* CoreDataModelSchema */ = {
+			isa = PBXGroup;
+			children = (
+				840358CE1A9BB35300188EC6 /* Supporting Files */,
+			);
+			path = CoreDataModelSchema;
+			sourceTree = "<group>";
+		};
+		840358CE1A9BB35300188EC6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				840358CF1A9BB35300188EC6 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		840358D31A9BB3B500188EC6 /* Schema */ = {
+			isa = PBXGroup;
+			children = (
+				840358D41A9BB47000188EC6 /* CoreDataModel.xcdatamodeld */,
+			);
+			name = Schema;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -135,6 +181,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				840358DE1A9BBFAC00188EC6 /* PBXTargetDependency */,
 			);
 			name = CoreDataModel;
 			productName = CoreDataModel;
@@ -159,6 +206,23 @@
 			productReference = 840358AF1A9B9A5700188EC6 /* CoreDataModelTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		840358CB1A9BB35300188EC6 /* CoreDataModelSchema */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 840358D21A9BB35300188EC6 /* Build configuration list for PBXNativeTarget "CoreDataModelSchema" */;
+			buildPhases = (
+				840358C81A9BB35300188EC6 /* Sources */,
+				840358C91A9BB35300188EC6 /* Frameworks */,
+				840358CA1A9BB35300188EC6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CoreDataModelSchema;
+			productName = CoreDataModelSchema;
+			productReference = 840358CC1A9BB35300188EC6 /* CoreDataModelSchema.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -172,6 +236,9 @@
 						CreatedOnToolsVersion = 6.1.1;
 					};
 					840358AE1A9B9A5700188EC6 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					840358CB1A9BB35300188EC6 = {
 						CreatedOnToolsVersion = 6.1.1;
 					};
 				};
@@ -190,6 +257,7 @@
 			targets = (
 				840358A31A9B9A5700188EC6 /* CoreDataModel */,
 				840358AE1A9B9A5700188EC6 /* CoreDataModelTests */,
+				840358CB1A9BB35300188EC6 /* CoreDataModelSchema */,
 			);
 		};
 /* End PBXProject section */
@@ -203,6 +271,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		840358AD1A9B9A5700188EC6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		840358CA1A9BB35300188EC6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -228,6 +303,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		840358C81A9BB35300188EC6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				840358D61A9BB47000188EC6 /* CoreDataModel.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -235,6 +318,11 @@
 			isa = PBXTargetDependency;
 			target = 840358A31A9B9A5700188EC6 /* CoreDataModel */;
 			targetProxy = 840358B11A9B9A5700188EC6 /* PBXContainerItemProxy */;
+		};
+		840358DE1A9BBFAC00188EC6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 840358CB1A9BB35300188EC6 /* CoreDataModelSchema */;
+			targetProxy = 840358DD1A9BBFAC00188EC6 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -387,6 +475,39 @@
 			};
 			name = Release;
 		};
+		840358D01A9BB35300188EC6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = CoreDataModelSchema/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		840358D11A9BB35300188EC6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				INFOPLIST_FILE = CoreDataModelSchema/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -406,6 +527,7 @@
 				840358BC1A9B9A5700188EC6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		840358BD1A9B9A5700188EC6 /* Build configuration list for PBXNativeTarget "CoreDataModelTests" */ = {
 			isa = XCConfigurationList;
@@ -414,8 +536,32 @@
 				840358BF1A9B9A5700188EC6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		840358D21A9BB35300188EC6 /* Build configuration list for PBXNativeTarget "CoreDataModelSchema" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				840358D01A9BB35300188EC6 /* Debug */,
+				840358D11A9BB35300188EC6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		840358D41A9BB47000188EC6 /* CoreDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				840358D71A9BB48300188EC6 /* CoreDataModel 2.xcdatamodel */,
+				840358D51A9BB47000188EC6 /* CoreDataModel.xcdatamodel */,
+			);
+			currentVersion = 840358D51A9BB47000188EC6 /* CoreDataModel.xcdatamodel */;
+			name = CoreDataModel.xcdatamodeld;
+			path = Schema/CoreDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 8403589B1A9B9A5700188EC6 /* Project object */;
 }

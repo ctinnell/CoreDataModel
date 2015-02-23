@@ -15,8 +15,8 @@ public class CoreDataManager {
     public var persistentStoreCoordinator: NSPersistentStoreCoordinator?
     public var managedObjectContext: NSManagedObjectContext?
     
-    private let productName = "DataModel"
-    private let schemaName = "DataModelSchema"
+    private let productName = "CoreDataModel"
+    private let schemaName = "CoreDataModelSchema"
 
     init() {
         managedObjectModel = initializeManagedObjectModel()
