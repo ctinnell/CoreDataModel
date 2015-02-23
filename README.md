@@ -13,7 +13,7 @@ Either start with these projects as a base, or (recommended) go through the step
 2. Import Core Data Framework:
 ![import](Documentation/ImportCoreData.png "Import Core Data")
 
-3. Copy the file CoreDataManager.swift into project.
+3. Copy CoreDataManager.swift into project.
 
 4. Add a new Bundle target named CoreDataModelSchema. Yes... choose OSX instead of iOS.  We'll fix that later:
 ![bundle](Documentation/AddBundleForSchema.png "Add Bundle Target")
