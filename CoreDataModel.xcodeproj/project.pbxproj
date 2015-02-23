@@ -10,6 +10,8 @@
 		840358AA1A9B9A5700188EC6 /* CoreDataModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 840358A91A9B9A5700188EC6 /* CoreDataModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		840358B01A9B9A5700188EC6 /* CoreDataModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 840358A41A9B9A5700188EC6 /* CoreDataModel.framework */; };
 		840358B71A9B9A5700188EC6 /* CoreDataModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840358B61A9B9A5700188EC6 /* CoreDataModelTests.swift */; };
+		840358C11A9B9AD500188EC6 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840358C01A9B9AD500188EC6 /* CoreDataManager.swift */; };
+		840358C31A9B9AFC00188EC6 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 840358C21A9B9AFC00188EC6 /* CoreData.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +31,8 @@
 		840358AF1A9B9A5700188EC6 /* CoreDataModelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreDataModelTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		840358B51A9B9A5700188EC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		840358B61A9B9A5700188EC6 /* CoreDataModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataModelTests.swift; sourceTree = "<group>"; };
+		840358C01A9B9AD500188EC6 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		840358C21A9B9AFC00188EC6 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				840358C31A9B9AFC00188EC6 /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,6 +58,7 @@
 		8403589A1A9B9A5700188EC6 = {
 			isa = PBXGroup;
 			children = (
+				840358C21A9B9AFC00188EC6 /* CoreData.framework */,
 				840358A61A9B9A5700188EC6 /* CoreDataModel */,
 				840358B31A9B9A5700188EC6 /* CoreDataModelTests */,
 				840358A51A9B9A5700188EC6 /* Products */,
@@ -72,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				840358A91A9B9A5700188EC6 /* CoreDataModel.h */,
+				840358C01A9B9AD500188EC6 /* CoreDataManager.swift */,
 				840358A71A9B9A5700188EC6 /* Supporting Files */,
 			);
 			path = CoreDataModel;
@@ -209,6 +216,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				840358C11A9B9AD500188EC6 /* CoreDataManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,6 +327,7 @@
 		840358BB1A9B9A5700188EC6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -328,12 +337,14 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		840358BC1A9B9A5700188EC6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
