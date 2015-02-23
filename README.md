@@ -7,10 +7,10 @@ Either start with these projects as a base, or (recommended) go through the step
 
 ### Getting Started:
 
-#### Create a new Swift Framework project:
+1. Create a new Swift Framework project:
 ![create](Documentation/CreateFramework.png "Create Project")
 
-#### Import Core Data Framework:
+2. Import Core Data Framework:
 ![import](Documentation/ImportCoreData.png "Import Core Data")
 
-#### Copy CoreDataManager.swift into project
+3. Copy the file CoreDataManager.swift into project.
