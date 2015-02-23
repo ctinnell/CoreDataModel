@@ -9,5 +9,5 @@ Either start with these projects as a base, or (recommended) go through the step
 
 1. Create a new Swift Framework project:
 
-![createproject](Documentation/1-CreateProject.png "Create Project")
+![create](Doecumentation/CreateFramework.png "Create Project")
 
