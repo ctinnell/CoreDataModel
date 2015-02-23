@@ -9,5 +9,8 @@ Either start with these projects as a base, or (recommended) go through the step
 
 1. Create a new Swift Framework project:
 
-![create](Doecumentation/CreateFramework.png "Create Project")
+![create](Documentation/CreateFramework.png "Create Project")
 
+2. Import Core Data Framework:
+
+![import](Documentation/ImportCoreData.png "Import Core Data")
