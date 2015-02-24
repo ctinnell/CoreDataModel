@@ -19,9 +19,12 @@ extension Person {
         let fetchRequest = NSFetchRequest(entityName: entityName())
         let entityDescription = NSEntityDescription.entityForName(entityName(), inManagedObjectContext: moc)
         fetchRequest.entity = entityDescription
-        var error: NSError?
-        let results = moc.executeFetchRequest(fetchRequest, error: &error) as [Person]
-        if countElements(results) == 0 {
+        var fetchError: NSError?
+        let results = moc.executeFetchRequest(fetchRequest, error: &fetchError) as [Person]
+        if let error = fetchError {
+            println("Error with Fetch Request: \(error.description)")
+        }
+        else if countElements(results) == 0 {
             createPerson("Bill Gates", email: "billgates@microsoft.com", moc: moc)
             createPerson("Tim Cook", email: "timcook@apple.com", moc: moc)
         }
@@ -29,10 +32,12 @@ extension Person {
     
     class func createPerson(name: String, email: String, moc: NSManagedObjectContext) {
         let person = NSEntityDescription.insertNewObjectForEntityForName(entityName(), inManagedObjectContext: moc) as Person
-        
-        var error: NSError?
+        var saveError: NSError?
         person.name = name
         person.email = email
-        moc.save(&error)
+        moc.save(&saveError)
+        if let error = saveError {
+            println("Error with managed object context: \(error)")
+        }
     }
 }
