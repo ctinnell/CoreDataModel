@@ -1,5 +1,5 @@
 //
-//  File.swift
+//  PersonDataObject.swift
 //  CoreDataModel
 //
 //  Created by Clay Tinnell on 2/24/15.
@@ -16,17 +16,16 @@ extension Person {
     }
     
     class func loadTestData(moc: NSManagedObjectContext) {
-        let fetchRequest = NSFetchRequest(entityName: entityName())
-        let entityDescription = NSEntityDescription.entityForName(entityName(), inManagedObjectContext: moc)
-        fetchRequest.entity = entityDescription
-        var fetchError: NSError?
-        let results = moc.executeFetchRequest(fetchRequest, error: &fetchError) as [Person]
+        let (results, fetchError) = allObjects(moc)
         if let error = fetchError {
             println("Error with Fetch Request: \(error.description)")
         }
         else if countElements(results) == 0 {
             createPerson("Bill Gates", email: "billgates@microsoft.com", moc: moc)
             createPerson("Tim Cook", email: "timcook@apple.com", moc: moc)
+        }
+        else {
+            println("data already loaded")
         }
     }
     
@@ -39,5 +38,14 @@ extension Person {
         if let error = saveError {
             println("Error with managed object context: \(error)")
         }
+    }
+    
+    class func allObjects(moc: NSManagedObjectContext) -> ([Person], NSError?) {
+        let fetchRequest = NSFetchRequest(entityName: entityName())
+        let entityDescription = NSEntityDescription.entityForName(entityName(), inManagedObjectContext: moc)
+        fetchRequest.entity = entityDescription
+        var fetchError: NSError?
+        let results = moc.executeFetchRequest(fetchRequest, error: &fetchError) as [Person]
+        return (results, fetchError)
     }
 }
