@@ -13,6 +13,10 @@
 		840358C11A9B9AD500188EC6 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840358C01A9B9AD500188EC6 /* CoreDataManager.swift */; };
 		840358C31A9B9AFC00188EC6 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 840358C21A9B9AFC00188EC6 /* CoreData.framework */; };
 		840358D61A9BB47000188EC6 /* CoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 840358D41A9BB47000188EC6 /* CoreDataModel.xcdatamodeld */; };
+		845B10671A9D0E1F00DEBE03 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845B10661A9D0E1F00DEBE03 /* Person.swift */; };
+		845B10681A9D0E1F00DEBE03 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845B10661A9D0E1F00DEBE03 /* Person.swift */; };
+		845B106B1A9D0EB000DEBE03 /* PersonDataObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845B106A1A9D0EB000DEBE03 /* PersonDataObject.swift */; };
+		845B106C1A9D0EB000DEBE03 /* PersonDataObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845B106A1A9D0EB000DEBE03 /* PersonDataObject.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +49,8 @@
 		840358CF1A9BB35300188EC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		840358D51A9BB47000188EC6 /* CoreDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataModel.xcdatamodel; sourceTree = "<group>"; };
 		840358D71A9BB48300188EC6 /* CoreDataModel 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "CoreDataModel 2.xcdatamodel"; sourceTree = "<group>"; };
+		845B10661A9D0E1F00DEBE03 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Person.swift; path = Model/Person.swift; sourceTree = "<group>"; };
+		845B106A1A9D0EB000DEBE03 /* PersonDataObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PersonDataObject.swift; path = Model/PersonDataObject.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +104,7 @@
 		840358A61A9B9A5700188EC6 /* CoreDataModel */ = {
 			isa = PBXGroup;
 			children = (
+				845B10651A9D0CF200DEBE03 /* Model */,
 				840358D31A9BB3B500188EC6 /* Schema */,
 				840358A91A9B9A5700188EC6 /* CoreDataModel.h */,
 				840358C01A9B9AD500188EC6 /* CoreDataManager.swift */,
@@ -153,6 +160,15 @@
 				840358D41A9BB47000188EC6 /* CoreDataModel.xcdatamodeld */,
 			);
 			name = Schema;
+			sourceTree = "<group>";
+		};
+		845B10651A9D0CF200DEBE03 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				845B10661A9D0E1F00DEBE03 /* Person.swift */,
+				845B106A1A9D0EB000DEBE03 /* PersonDataObject.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -291,6 +307,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				845B10671A9D0E1F00DEBE03 /* Person.swift in Sources */,
+				845B106B1A9D0EB000DEBE03 /* PersonDataObject.swift in Sources */,
 				840358C11A9B9AD500188EC6 /* CoreDataManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -299,6 +317,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				845B10681A9D0E1F00DEBE03 /* Person.swift in Sources */,
+				845B106C1A9D0EB000DEBE03 /* PersonDataObject.swift in Sources */,
 				840358B71A9B9A5700188EC6 /* CoreDataModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -545,6 +565,7 @@
 				840358D11A9BB35300188EC6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
@@ -555,7 +576,7 @@
 				840358D71A9BB48300188EC6 /* CoreDataModel 2.xcdatamodel */,
 				840358D51A9BB47000188EC6 /* CoreDataModel.xcdatamodel */,
 			);
-			currentVersion = 840358D51A9BB47000188EC6 /* CoreDataModel.xcdatamodel */;
+			currentVersion = 840358D71A9BB48300188EC6 /* CoreDataModel 2.xcdatamodel */;
 			name = CoreDataModel.xcdatamodeld;
 			path = Schema/CoreDataModel.xcdatamodeld;
 			sourceTree = "<group>";
