@@ -18,7 +18,7 @@ public class CoreDataManager {
     private let productName = "CoreDataModel"
     private let schemaName = "CoreDataModelSchema"
 
-    init() {
+    public init() {
         managedObjectModel = initializeManagedObjectModel()
         persistentStoreCoordinator = initializePersistentStoreCoordinator()
         managedObjectContext = initializeManagedObjectContext()
@@ -39,14 +39,20 @@ public class CoreDataManager {
     
     private func initializePersistentStoreCoordinator() -> NSPersistentStoreCoordinator? {
         let url = NSURL.fileURLWithPath(self.applicationDocumentsDirectory().stringByAppendingPathComponent("\(productName).sqlite"))
-        let options = [NSMigratePersistentStoresAutomaticallyOption:1, NSInferMappingModelAutomaticallyOption:1]
+        let options = [NSMigratePersistentStoresAutomaticallyOption:1, NSInferMappingModelAutomaticallyOption:1] as NSDictionary
         var storeCoordinator: NSPersistentStoreCoordinator?
         
         if let mom = managedObjectModel {
             storeCoordinator = NSPersistentStoreCoordinator(managedObjectModel: mom)
+            var addStoreError: NSError?
+    
+            storeCoordinator?.addPersistentStoreWithType(NSSQLiteStoreType, configuration: nil, URL: url, options: options, error: &addStoreError)
+            if let error = addStoreError {
+                println("Unable to add Persistent Store!!!")
+            }
         }
         else {
-            println("Unable to create Persistent Store!!!")
+            println("Unable to create Persistent Store Coordator - managed object context is nil!!!")
         }
         
         //encrypt data store
