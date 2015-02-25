@@ -9,7 +9,7 @@
 import Foundation
 import CoreData
 
-class Person: NSManagedObject {
+public class Person: NSManagedObject {
 
     @NSManaged var name: String
     @NSManaged var email: String

@@ -8,25 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		840358AA1A9B9A5700188EC6 /* CoreDataModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 840358A91A9B9A5700188EC6 /* CoreDataModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		840358B01A9B9A5700188EC6 /* CoreDataModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 840358A41A9B9A5700188EC6 /* CoreDataModel.framework */; };
-		840358B71A9B9A5700188EC6 /* CoreDataModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840358B61A9B9A5700188EC6 /* CoreDataModelTests.swift */; };
 		840358C11A9B9AD500188EC6 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840358C01A9B9AD500188EC6 /* CoreDataManager.swift */; };
 		840358C31A9B9AFC00188EC6 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 840358C21A9B9AFC00188EC6 /* CoreData.framework */; };
 		840358D61A9BB47000188EC6 /* CoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 840358D41A9BB47000188EC6 /* CoreDataModel.xcdatamodeld */; };
 		845B10671A9D0E1F00DEBE03 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845B10661A9D0E1F00DEBE03 /* Person.swift */; };
-		845B10681A9D0E1F00DEBE03 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845B10661A9D0E1F00DEBE03 /* Person.swift */; };
 		845B106B1A9D0EB000DEBE03 /* PersonDataObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845B106A1A9D0EB000DEBE03 /* PersonDataObject.swift */; };
-		845B106C1A9D0EB000DEBE03 /* PersonDataObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845B106A1A9D0EB000DEBE03 /* PersonDataObject.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		840358B11A9B9A5700188EC6 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8403589B1A9B9A5700188EC6 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 840358A31A9B9A5700188EC6;
-			remoteInfo = CoreDataModel;
-		};
 		840358DD1A9BBFAC00188EC6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 8403589B1A9B9A5700188EC6 /* Project object */;
@@ -40,9 +29,7 @@
 		840358A41A9B9A5700188EC6 /* CoreDataModel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CoreDataModel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		840358A81A9B9A5700188EC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		840358A91A9B9A5700188EC6 /* CoreDataModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreDataModel.h; sourceTree = "<group>"; };
-		840358AF1A9B9A5700188EC6 /* CoreDataModelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreDataModelTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		840358B51A9B9A5700188EC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		840358B61A9B9A5700188EC6 /* CoreDataModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataModelTests.swift; sourceTree = "<group>"; };
 		840358C01A9B9AD500188EC6 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		840358C21A9B9AFC00188EC6 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		840358CC1A9BB35300188EC6 /* CoreDataModelSchema.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreDataModelSchema.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -59,14 +46,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				840358C31A9B9AFC00188EC6 /* CoreData.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		840358AC1A9B9A5700188EC6 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				840358B01A9B9A5700188EC6 /* CoreDataModel.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,7 +74,6 @@
 			isa = PBXGroup;
 			children = (
 				840358A41A9B9A5700188EC6 /* CoreDataModel.framework */,
-				840358AF1A9B9A5700188EC6 /* CoreDataModelTests.xctest */,
 				840358CC1A9BB35300188EC6 /* CoreDataModelSchema.bundle */,
 			);
 			name = Products;
@@ -124,7 +102,6 @@
 		840358B31A9B9A5700188EC6 /* CoreDataModelTests */ = {
 			isa = PBXGroup;
 			children = (
-				840358B61A9B9A5700188EC6 /* CoreDataModelTests.swift */,
 				840358B41A9B9A5700188EC6 /* Supporting Files */,
 			);
 			path = CoreDataModelTests;
@@ -204,24 +181,6 @@
 			productReference = 840358A41A9B9A5700188EC6 /* CoreDataModel.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		840358AE1A9B9A5700188EC6 /* CoreDataModelTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 840358BD1A9B9A5700188EC6 /* Build configuration list for PBXNativeTarget "CoreDataModelTests" */;
-			buildPhases = (
-				840358AB1A9B9A5700188EC6 /* Sources */,
-				840358AC1A9B9A5700188EC6 /* Frameworks */,
-				840358AD1A9B9A5700188EC6 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				840358B21A9B9A5700188EC6 /* PBXTargetDependency */,
-			);
-			name = CoreDataModelTests;
-			productName = CoreDataModelTests;
-			productReference = 840358AF1A9B9A5700188EC6 /* CoreDataModelTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 		840358CB1A9BB35300188EC6 /* CoreDataModelSchema */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 840358D21A9BB35300188EC6 /* Build configuration list for PBXNativeTarget "CoreDataModelSchema" */;
@@ -251,9 +210,6 @@
 					840358A31A9B9A5700188EC6 = {
 						CreatedOnToolsVersion = 6.1.1;
 					};
-					840358AE1A9B9A5700188EC6 = {
-						CreatedOnToolsVersion = 6.1.1;
-					};
 					840358CB1A9BB35300188EC6 = {
 						CreatedOnToolsVersion = 6.1.1;
 					};
@@ -272,7 +228,6 @@
 			projectRoot = "";
 			targets = (
 				840358A31A9B9A5700188EC6 /* CoreDataModel */,
-				840358AE1A9B9A5700188EC6 /* CoreDataModelTests */,
 				840358CB1A9BB35300188EC6 /* CoreDataModelSchema */,
 			);
 		};
@@ -280,13 +235,6 @@
 
 /* Begin PBXResourcesBuildPhase section */
 		840358A21A9B9A5700188EC6 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		840358AD1A9B9A5700188EC6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -313,16 +261,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		840358AB1A9B9A5700188EC6 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				845B10681A9D0E1F00DEBE03 /* Person.swift in Sources */,
-				845B106C1A9D0EB000DEBE03 /* PersonDataObject.swift in Sources */,
-				840358B71A9B9A5700188EC6 /* CoreDataModelTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		840358C81A9BB35300188EC6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -334,11 +272,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		840358B21A9B9A5700188EC6 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 840358A31A9B9A5700188EC6 /* CoreDataModel */;
-			targetProxy = 840358B11A9B9A5700188EC6 /* PBXContainerItemProxy */;
-		};
 		840358DE1A9BBFAC00188EC6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 840358CB1A9BB35300188EC6 /* CoreDataModelSchema */;
@@ -367,6 +300,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -385,6 +319,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_MODULE_NAME = CoreDataModel;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -413,6 +348,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -424,6 +360,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_MODULE_NAME = CoreDataModel;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -446,6 +383,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SYMROOT = build;
 			};
 			name = Debug;
 		};
@@ -462,36 +400,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		840358BE1A9B9A5700188EC6 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = CoreDataModelTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		840358BF1A9B9A5700188EC6 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = CoreDataModelTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				SYMROOT = build;
 			};
 			name = Release;
 		};
@@ -545,15 +454,6 @@
 			buildConfigurations = (
 				840358BB1A9B9A5700188EC6 /* Debug */,
 				840358BC1A9B9A5700188EC6 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		840358BD1A9B9A5700188EC6 /* Build configuration list for PBXNativeTarget "CoreDataModelTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				840358BE1A9B9A5700188EC6 /* Debug */,
-				840358BF1A9B9A5700188EC6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
