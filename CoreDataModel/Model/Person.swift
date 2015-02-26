@@ -12,7 +12,7 @@ import CoreData
 @objc(Person)
 public class Person: NSManagedObject {
 
-    @NSManaged var name: String
-    @NSManaged var email: String
+    @NSManaged public var name: String
+    @NSManaged public var email: String
 
 }
